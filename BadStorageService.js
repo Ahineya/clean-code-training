@@ -2,7 +2,7 @@ const publish = require('./publish');
 
 class BadStorageService {
 
-    add(user, doNotFireEvent) {
+    add(user, _doNotFireEvent) {
         if (this.data) {
             this.data.push(user);
         } else {
@@ -10,7 +10,7 @@ class BadStorageService {
             this.data.push(user);
         }
 
-        if (!doNotFireEvent) {
+        if (!_doNotFireEvent) {
             publish('USERS_ADDED', this.data);
         }
     }

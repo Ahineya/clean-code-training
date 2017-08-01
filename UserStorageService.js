@@ -15,8 +15,8 @@ class UserStorageService {
         this.publish('USERS_ADDED', this.users);
     }
 
-    getUserById(id) {
-        return this.users.find(u => u.id === id) || null;
+    getUserById(userId) {
+        return this.users.find(u => u.id === userId) || null;
     }
 
     getUsers() {
