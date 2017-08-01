@@ -35,3 +35,17 @@ console.log('Found user with id 2:', foundUser);
 
 const averageAge = userStorageService.getUsersAverageAge();
 console.log('\nAverage users age:', averageAge);
+
+// Danger zone
+/*
+const users1 = userStorageService.getUsers();
+users1[0] = 'a';
+const users2 = userStorageService.getUsers();
+console.log(users2);
+*/
+
+/*
+const users1 = userStorageService.getUsers();
+users1[0].name = 'Dave';
+console.log(userStorageService.getUsers());
+*/
